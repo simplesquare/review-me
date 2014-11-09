@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>
+      ReviewMe
+    </title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="aggr-rating">
+        <div class="aggr-rating-numb">
+          4.5
+        </div>
+        <div class="aggr-rating-star">
+          <span class="image-responsive stars">
+            1.5
+          </span>
+     </div>
+     </div>
+     <div class="sources">
+       <div class="source">
+         <div class="logo-img">
+           <a href="#">
+             <img src="images/Google_Logo_dark.png" class="image-responsive">
+           </a>
+         </div>
+         
+         
+         <div class="details">
+           
+           <div class="rating-numb">
+             <span>
+               3.5
+             </span>
+             <img class="icon-star" src="images/icon-star-dark.svg">
+            
+           </div>
+           
+           <div class="numb-reviews">
+             
+             <span class="numb-reviews">
+               12
+             </span>
+             <img  class="icon-person" src="images/icon-person-dark.png">
+           </div>
+         </div>
+       </div>
+       
+       <div class="source">
+         <div class="logo-img">
+           <a href="#">
+             <img src="images/Google_Logo_dark.png" class="image-responsive">
+           </a>
+         </div>
+         
+         
+         <div class="details">
+           
+           <div class="rating-numb">
+             <span>
+               3.5
+             </span>
+             <img class="icon-star" src="images/icon-star-dark.svg">
+             
+           </div>
+           
+           <div class="numb-reviews">
+             
+             <span class="numb-reviews">
+               12
+             </span>
+             <img  class="icon-person" src="images/icon-person-dark.png">
+           </div>
+         </div>
+       </div>
+
+       <div class="source">
+         <div class="logo-img">
+           <a href="#">
+             <img src="images/Google_Logo_dark.png" class="image-responsive">
+           </a>
+         </div>
+         
+         
+         <div class="details">
+           
+           <div class="rating-numb">
+             <span>
+               3.5
+             </span>
+             <img class="icon-star" src="images/icon-star-dark.svg">
+             
+           </div>
+           
+           <div class="numb-reviews">
+             
+             <span class="numb-reviews">
+               12
+             </span>
+             <img  class="icon-person" src="images/icon-person-dark.png">
+           </div>
+         </div>
+       </div>
+       
+       
+     </div>
+     <div class="quote">
+       <span>
+         "The best coffee in Old Street"
+       </span>
+       <span class="name">
+         (Hanna)
+       </span>
+     </div>
+  </div>
+  <script>
+    $.fn.stars = function() {
+      return $(this).each(function() {
+        // Get the value
+      var val = parseFloat($(this).html());
+      // Make sure that the value is in 0 - 5 range, multiply to get width
+      val = Math.round(val * 4) / 4;
+      /* To round to nearest quarter */
+      val = Math.round(val * 2) / 2;
+      /* To round to nearest half */
+      var size = Math.max(0, (Math.min(5, val))) * 20;
+      // Create stars holder
+      var $span = $('<span />').width(size);
+      // Replace the numerical value with stars
+      $(this).html($span);
+    }
+                       );
+		}
+          $(function() {
+    		$('span.stars').stars();
+		}
+         );
+  </script>
+  </body>
+  
+</html>
