@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Widget Settings &bull; Wix</title>
+    <link rel="stylesheet" href="ui-lib.min.css"/>
+</head>
+<body>
+
+<header class="box">
+    <div class="logo">
+        <img width="86" src="images/wix_icon.png" alt="logo"/>
+    </div>
+    <div class="loggedOut">
+        <p>
+            This is a sample Settings view for widgets and pages created with <a href="http://dev.wix.com"
+                                                                                 target="_blank">Wix's 3rd Party SDK</a>,
+            compatible with Wix's product requirements.
+            This boilerplate is aimed at saving time for developing the UI of your apps, and let the
+            developer focus on developing logic.
+        </p>
+
+        <div class="login-panel">
+            <p class="create-account">Don't have an<br/>account? <strong><a href="#" target="_blank">Create
+                one</a></strong></p>
+            <button class="submit uilib-btn connect">Connect account</button>
+        </div>
+    </div>
+    <div class="loggedIn hidden">
+        <p>You are now connected to <strong>John Doe (john@doe.com)</strong> account<br/>
+            <a class="disconnect-account">Disconnect account</a></p>
+
+        <div class="premium-panel">
+            <p class="premium-features ">Premium features</p>
+            <button class="submit btn upgrade">Upgrade</button>
+        </div>
+    </div>
+</header>
+
+
+<div class="accordion" wix-ctrl="Accordion">
+
+    <div wix-scroll="{height:446}">
+        <div class="acc-pane">
+            <h3>Widget Style: </h3>
+            <div class="acc-content">
+                <ul class="list">
+                     <li wix-label="Background Color:">
+                        <div wix-param="backgroundColor" wix-ctrl="ColorPickerWithOpacity"
+                             wix-options="{startWithColor:'color-1', startWithOpacity: 50}"></div>
+                    </li>
+                    <li wix-label="Quote Font:">
+                        <div wix-param="myFont" wix-ctrl="FontStylePicker"></div>
+                    </li>
+                    <li wix-label="Quote Color:">
+                        <div wix-param="quoteColor" wix-ctrl="ColorPicker"
+                             wix-options="{startWithColor:'color-5'}"></div>
+                    </li>      
+                </ul>
+            </div>
+        </div>
+
+        <div class="acc-pane">
+            <h3>Review Sources</h3>
+            <div class="acc-content">
+                <p>Choose a review source</p>
+
+            
+                    <div wix-model="googleReviews" wix-ctrl="Checkbox:{ postLabel:'Google'}"></div>
+                    <div wix-model="myText" wix-ctrl="Input" placeholder="Google Place ID"></div>
+                    <div wix-model="YelpReviews" wix-ctrl="Checkbox:{ postLabel:'Yelp'}"></div>
+                    <div wix-model="FoursquareReviews" wix-ctrl="Checkbox:{ postLabel:'FourSquare'}"></div>
+   
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- jQuery Dependency -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- Wix SDK -->
+<script src="http://sslstatic.wix.com/services/js-sdk/1.31.0/js/Wix.js"></script>
+
+<script type="text/javascript" src="ui-lib.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        Wix.UI.initialize({
+            numOfImages: 100,
+            isIconShown: true,
+            imageVisibility: 'show',
+            imagesToSync: 0,
+            imageLink: false
+        });
+
+        /**
+         Validate email adress
+         */
+        $('#email').getCtrl().setValidationFunction(function (value) {
+            return (/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i.test(value));
+        });
+    });
+
+</script>
+
+</body>
+</html>

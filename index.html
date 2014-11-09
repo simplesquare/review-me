@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
     </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
   </head>
   
   <body>
-    <div class="container">
+    <div class="container" wix-param="bgColor">
       <div class="aggr-rating">
         <div class="aggr-rating-numb">
           4.5
@@ -34,7 +35,7 @@
          </div>
          
          
-         <div class="details">
+         <div class="details" >
            
            <div class="rating-numb">
              <span>
@@ -112,7 +113,7 @@
        
        
      </div>
-     <div class="quote">
+     <div class="quote" wix-param="fontFamily">
        <span>
          "The best coffee in Old Street"
        </span>
@@ -139,6 +140,10 @@
     }
                        );
 		}
+
+	var aggreg = function(param) {
+		var  
+	}
           $(function() {
     		$('span.stars').stars();
 		}
