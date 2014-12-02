@@ -1,0 +1,136 @@
+.container {
+  	border: 1px solid #ccc;
+  	color: #fff;
+  	padding: 0.5em;
+  	text-align: center;
+  	background: bgColor;
+}
+.aggr-rating {
+	display: inline-block;
+	padding: 0.5em;
+	vertical-align: middle;
+	text-align: center;
+}
+.aggr-rating-star {
+	display: inline-block;
+	vertical-align: middle;
+	width: 70%;
+}
+.aggr-rating-numb {
+	width: 20%;
+	margin-right: 0.3em;
+	vertical-align: middle;
+	color: #e2b330;
+	display: inline-block;
+	font-size: 1.5em;
+}
+.logo-img {
+	width: 70%;
+	margin: auto;
+}
+.star {
+	width: 20%;
+}
+.source {
+	width: 5em;
+	display: inline-block;
+	padding: 0.3em;
+	
+}
+.details {
+	line-height: 0.8;
+	color: #666255;
+	width: 100%;
+	font-size: 0.8em;
+	padding: 0.3em;
+}
+.source .rating-numb {
+	float: left;
+}
+.numb-reviews {
+	display: inline-block;
+vertical-align: bottom;
+padding-bottom: 0.2em;
+}
+.icon-person {
+	width: 0.8em;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.rating-numb {
+	width: 50%;
+}
+.rating-numb span {
+	width: 100%;
+	text-align: center;
+	clear: both;
+	font-size: 0.8em;
+	padding-bottom: 0.2em;
+}
+.rating-numb .icon-star {
+	width: 0.9em;
+	display: inline-block;
+	vertical-align: bottom;	
+}
+
+img {
+	width: 100%;
+}
+.quote {
+	margin: 1em 0 0 0;
+	color: #666255;
+	font-style: italic;
+	display: inline-block;
+	width: 12em;
+	font-family: 'Serif';
+}
+span {
+	width: 100%;
+	text-align: center;;
+	float: right;
+	font-size: 10px;
+	display: block;
+	clear: both;
+	font-size: 0.8em;
+}
+span.stars, span.stars span {
+    display: block;
+    background: url(/images/icon-star-09.svg) 0 -19px repeat-x;
+  	width: 100px;
+    height: 16px;
+    float: left;
+    background-size: 20px 33px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}
+span.name {
+	width: 100%;
+	font-size: 0.8em;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+@media all and (max-width: 200px) {
+	.quote {
+		width: 100%;
+	}
+	.aggr-rating-numb {
+		width: 100%;
+	}
+}
+@media all and (min-width: 500px) {
+	.aggr-rating {
+		display: inline-block;
+	}
+	.quote {
+		padding: 0.5em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.sources {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
